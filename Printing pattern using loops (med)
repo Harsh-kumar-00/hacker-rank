@@ -1,0 +1,47 @@
+#include<stdio.h>
+int main()
+{
+	int i,j,h,u;
+	
+	int n;
+	
+	scanf("%d",&n);
+	
+	int size = 2*n-1;
+	
+	int start = 0;
+	int end = size - 1;
+	
+	int array[size][size];
+	
+	
+	
+	while (n!=0)
+	{
+		
+		for(  i = start; i <= end; i++)
+		{
+			for( j = start; j <= end; j++)
+			{
+				if(i==start||j==start||i==end||j==end)
+				{
+				array[i][j]=n;
+				}
+			}
+		}
+		++start;
+		--end; 
+		--n;
+	}
+	
+	for(h = 0; h < size; h++)
+	{
+		for(u = 0; u < size; u++)
+		{
+			printf("%d ",array[h][u]);	
+		}
+		printf("\n");
+	}
+		
+	return 0;
+}
