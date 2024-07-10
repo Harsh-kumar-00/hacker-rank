@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+int main()
+{
+    int n;
+    //printf("Enter the number of boxes :  ");
+    scanf("%d",&n);
+    int a[n][3];
+    int i;
+    int j;
+    int k;
+    for( i=0; i<n; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+        
+    }
+    
+    for(i=0; i<n; i++)
+    {
+        if(a[i][2]<41)
+        {
+           k = a[i][0]*a[i][1]*a[i][2];
+            printf("%d\n",k);
+        }
+        else
+        break;
+       
+    }
+    
+}
